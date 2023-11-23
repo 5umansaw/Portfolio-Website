@@ -1,0 +1,57 @@
+
+.resume{
+    height: 100%;
+}
+
+.timeline{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+
+    &__experience , &__education{
+        width: 50%;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__header{
+            display: inline-block;
+            color: var(--yellow-theme-main-colour);
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-bottom: 2px solid var(--yellow-theme-main-colour);
+        }
+
+        &__vertical-element{
+            padding: 0px 0px 30px 0px;
+            
+        }
+
+        h3 , h4{
+            font-size: 18px;
+        }
+
+        p{
+            font-weight: 700;
+        }
+
+
+    }
+}
+
+@media only screen and (max-width : 768px){
+    .timeline{
+        flex-direction: column;
+
+        &__education , &__experience{
+            width: 100%;
+            gap: 2rem;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+
+.contact{
+    &__content{
+        padding: 20px;
+
+        &__header-text{
+            color: var(--yellow-theme-main-colour);
+            display: inline-block;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-bottom: 2px solid var(--yellow-theme-main-colour);
+        }
+
+        &__form{
+            margin-top: 30px;
+            margin-right: 20px;
+            &__control{
+                display: grid;
+                grid-template-columns: repeat(2 , 1fr);
+                gap: 40px;
+                margin-bottom: 30px;
+
+                div{
+                    position: relative;
+                    .inputName,
+                    .inputEmail,
+                    .inputDescription{
+                        width:100%;
+                        border: 2px solid var(--yellow-theme-main-colour) !important;
+                        padding: 16px 12px;
+                        transition: all 0.5s ease;
+                        position: relative;
+                        background-color: transparent;
+                        color: var(--yellow-theme-sub-text-colour);
+                        font-size: 16px;
+
+                    }
+
+                    .nameLabel,
+                    .emailLabel,
+                    .descriptionLabel{
+                        font-weight: 500;
+                        position: relative;
+                        top: 0px;
+                        left: 0px;
+                        transition: all 0.5s ease;
+                        color: var(--yellow-theme-sub-text-colour);
+                        font-size: 16px;
+                    }
+
+
+                }
+            }
+
+            button{
+                cursor: pointer;
+                padding: 10px 70px;
+                font-size: 2rem;
+                background: transparent;
+                color: var(--yellow-theme-main-colour);
+                border: 1.5px solid var(--yellow-theme-main-colour);
+                border-radius: 4px;
+                font-weight: 600;
+
+                &:hover{
+                    color:black;
+                    background-color: var(--yellow-theme-main-colour);
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .contact__content__form{
+        text-align: center;
+
+        &__control{
+            grid-template-columns: repeat(1 , 1fr);
+        }
+    }
+}
+
+.toastMsg{
+    background-color: var(--yellow-theme-main-colour);
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
