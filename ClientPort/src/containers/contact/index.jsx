@@ -38,7 +38,7 @@ const Contact = () => {
         })
     }).then(res=>{
        console.log(res)
-       if(res.statusText === "OK"){
+       if(res.status === 200){
          M.toast({html: "Email Sent" , classes: "toastMsg"})
        }else{
          M.toast({html: "Server Error" , classes: "toastMsg"})

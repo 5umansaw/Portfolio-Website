@@ -10,11 +10,17 @@ app.get('/check' , (req , res)=>{
     res.send("hello suman")
 })
 
-app.post('/contact' , (req , res)=>{
+app.post('/contact' , async (req , res)=>{
     const data = req.body
     console.log(data)
-    sentMail(data)
-    res.status(200).json({msg: "email sent"})
+
+    try{
+        sentMail(data)
+        res.status(200).json({msg: "email sent"})
+    }catch(e){
+        res.status(500).send(e)
+    }
+    
 })
 
 
