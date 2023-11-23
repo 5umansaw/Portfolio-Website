@@ -1,5 +1,6 @@
 const express = require('express')
 const sentMail = require('./emailService/email')
+const path = require('path')
 const port = process.env.PORT || 4000
 const app = express()
 
